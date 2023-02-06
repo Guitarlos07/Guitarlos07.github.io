@@ -16,7 +16,7 @@ function logData(name, impressions) {
     valueInputOption: 'RAW',
     insertDataOption: 'INSERT_ROWS',
     resource: {
-      values: [[name, impression]]
+      values: [[document.getElementById("name").innerHTML, document.getElementById("impression").innerHTML]]
     }
   }, function(err, response) {
     if (err) {
