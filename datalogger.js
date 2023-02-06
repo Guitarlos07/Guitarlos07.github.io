@@ -29,6 +29,11 @@ var sheetId = '1JZANWXsUIWLKbOMlC4PX0ASEct6N8Xp71rqC3mZemxY';
 
 //this was the original code, but it failed because of its reliance on the require method new program as follows:
 
+//This code initiates the gapi method
+gapi.client.init({
+  'apiKey': API_KEY
+  })
+
 // Function to log user inputs to the Google Sheet
 function logData(name, favoriteAnimal) {
   gapi.client.sheets.spreadsheets.values.append({
