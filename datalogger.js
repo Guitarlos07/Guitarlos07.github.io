@@ -30,13 +30,17 @@ var sheetId = '1JZANWXsUIWLKbOMlC4PX0ASEct6N8Xp71rqC3mZemxY';
 //this was the original code, but it failed because of its reliance on the require method new program as follows:
 
 //This code initiates the gapi method
-gapi.client.init({
-  'apiKey': API_KEY
+gapi.load('client:auth2', function() {
+  gapi.client.init({
+    apiKey: API_KEY,
+    clientId: CLIENT_ID,
+    discoveryDocs: DISCOVERY_DOCS,
+    scope: SCOPES
   }).then(function() {
-
-// Function to log user inputs to the Google Sheet
-function logData(name, favoriteAnimal) {
-  gapi.client.sheets.spreadsheets.values.append({
+    // Your code that uses the gapi library goes here
+    // Function to log user inputs to the Google Sheet
+  function logData(name, favoriteAnimal) {
+    gapi.client.sheets.spreadsheets.values.append({
     spreadsheetId: sheetId,
     range: 'Sheet1!A2',
     valueInputOption: 'RAW',
@@ -48,4 +52,7 @@ function logData(name, favoriteAnimal) {
     console.log('Data logged successfully');
   }
   )};
+
+  });
 });
+
