@@ -32,7 +32,7 @@ var sheetId = '1JZANWXsUIWLKbOMlC4PX0ASEct6N8Xp71rqC3mZemxY';
 //This code initiates the gapi method
 gapi.client.init({
   'apiKey': API_KEY
-  })
+  }).then(function() {
 
 // Function to log user inputs to the Google Sheet
 function logData(name, favoriteAnimal) {
@@ -48,3 +48,4 @@ function logData(name, favoriteAnimal) {
     console.log('Data logged successfully');
   }
   )};
+});
