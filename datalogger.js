@@ -8,7 +8,7 @@ var API_KEY = 'AIzaSyDBtQq8QskcrkwXpibpE9p-NdUOBMow_EQ';
 var sheetId = '1JZANWXsUIWLKbOMlC4PX0ASEct6N8Xp71rqC3mZemxY';
 
 // Function to log user inputs to the Google Sheet
-function logData(name, impressions) {
+function logData(name, impression) {
   sheets.spreadsheets.values.append({
     auth: API_KEY,
     spreadsheetId: sheetId,
