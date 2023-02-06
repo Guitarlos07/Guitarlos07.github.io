@@ -25,7 +25,4 @@ function logData(name, impression) {
       console.log('Data logged successfully');
     }
   });
-}
-
-// Example of how to use the logData function
-logData('John', 'Tiger');
+  
