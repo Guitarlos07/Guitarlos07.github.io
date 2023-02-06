@@ -16,7 +16,7 @@ function logData(name, impressions) {
     valueInputOption: 'RAW',
     insertDataOption: 'INSERT_ROWS',
     resource: {
-      values: [[name, impressions]]
+      values: [[name, impression]]
     }
   }, function(err, response) {
     if (err) {
