@@ -25,4 +25,4 @@ function logData(name, impression) {
       console.log('Data logged successfully');
     }
   });
-  
+}
