@@ -33,7 +33,7 @@ var sheetId = '1JZANWXsUIWLKbOMlC4PX0ASEct6N8Xp71rqC3mZemxY';
 gapi.load('client:auth2', function() {
   gapi.client.init({
     apiKey: API_KEY,
-    clientId: 782847601029-okoddn04a3dubmfqopvm4g561ft0co0u.apps.googleusercontent.com,
+    clientId: "782847601029-okoddn04a3dubmfqopvm4g561ft0co0u.apps.googleusercontent.com",
     discoveryDocs: "https://developers.google.com/discovery/v1/reference/apis",
     scope: "https://www.googleapis.com/auth/drive"
   }).then(function() {
